@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+  <main>
+    <form class="form" action="" method="post">
+      <h1 class="form__title">Регистрация</h1>
+
+      <div class="form__main">
+        <div class="row">
+          <div class="item col-12">
+            <labal for="email">Email</labal>
+            <input 
+              id="email"
+              class="input"
+              type="email"
+              placeholder="example@site.domain"
+              required
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="item col-6">
+            <labal for="pass">Пароль</labal>
+            <input 
+              id="pass"
+              class="input"
+              type="password"
+              placeholder="password"
+              minlength="8"
+              required
+            >
+          </div>
+          <div class="item col-6">
+            <labal for="pass-repeat">Повторите пароль</labal>
+            <input 
+              id="pass-repeat"
+              class="input"
+              type="password"
+              placeholder="password"
+              minlength="8"
+              required
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="item col-12">
+            <labal for="person-data">ФИО</labal>
+            <input 
+              id="person-data"
+              class="input"
+              type="text"
+              pattern="^([А-Я][а-я]*)\s([А-Я][а-я]*)(\s[А-Я][а-я]*)$"
+              placeholder="Игорев Игорь Игоревич"
+              required
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="item col-6">
+            <labal for="age">Возраст</labal>
+            <input 
+              id="age" 
+              class="input"
+              type="text"
+              pattern="[0-9]"
+              maxlength="3"
+              placeholder="18"
+              required
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-container">
+        <button class="btn btn--send">Отправить</button>
+        <button class="btn btn--cancel">Отмена</button>
+      </div>
+    </form>
+  </main>
+</body>
+
+</html>
