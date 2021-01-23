@@ -1,3 +1,4 @@
+// Задание 4
 const printTriangle = (count_row) => {
   debugger;
   var i = 0, j = 0;
@@ -16,3 +17,4 @@ const printTriangle = (count_row) => {
 }
 
 printTriangle(4);
+
