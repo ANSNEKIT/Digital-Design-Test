@@ -1,0 +1,131 @@
+:root {
+  --main-bg: #E5E5E5;
+  --child-menu: #ccc;
+  --item-hover: #9C9C9C;
+  --white: white;
+  --black: black;
+  --border: #777;
+  --link-active: #700;
+  --link-decor: #3a0752;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: var(--main-bg);
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.top-navbar {
+  width: 600px;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.nav {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  list-style: none;
+  
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  position: relative;
+  background-color: var(--white);
+
+  margin-right: 30px;
+}
+
+.nav__link:hover,
+.nav__link:focus,
+.dropdown-menu__link:hover,
+.dropdown-menu__link:focus {
+  text-decoration: underline solid var(--link-decor);
+}
+
+.nav__link:active {
+  text-decoration: underline solid var(--link-active);
+}
+
+.nav__link {
+  display: block;
+  text-decoration: none;
+  color: var(--black);
+
+  padding: 10px 20px;
+}
+
+.dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  max-width: 350px;
+  min-width: 100px;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  
+  visibility: hidden;
+  border: 1px solid #000000;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  box-sizing: border-box;
+
+  padding: 0;
+  margin: 5px 0 0;
+}
+
+.dropdown-menu__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.dropdown-menu__item:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.dropdown-menu__item:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.dropdown-menu__item:hover,
+.dropdown-menu__item:focus  {
+  background-color: var(--item-hover);
+  cursor: pointer;
+}
+
+.dropdown-menu__link {
+  display: block;
+  text-decoration: none;
+  color: var(--black);
+
+  padding: 10px 20px;
+}
+
+.dropdown-menu__link:active  {
+  text-decoration: underline solid var(--link-active);
+}
+
+.nav__item:hover .dropdown-menu, 
+.nav__item:focus .dropdown-menu {
+  visibility: visible;
+  transform: translate3d(0px, 31px, 0px);
+  top: 0px;
+  left: 0px;
+  will-change: transform;
+}
+
+
